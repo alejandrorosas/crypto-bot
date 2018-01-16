@@ -1,0 +1,31 @@
+# Python
+__pycache__
+*.pyo
+*.pyc
+
+# Virtualenv
+venv
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project files
+.idea
+.project
+.pydevproject
+.vscode
+
+.python-version
+
+.cache
+/build/
+/htmlcov/
+/.coverage
+
+# Environment file
+.env

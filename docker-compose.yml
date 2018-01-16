@@ -1,0 +1,22 @@
+version: '2'
+services:
+  bot:
+    build: .
+    # links:
+    #  - mongo
+    # depends_on:
+    #  - mongo
+    restart: unless-stopped
+    volumes:
+     - .:/usr/src/app
+#   mongo:
+#     image: mongo:3.4
+#     restart: unless-stopped
+#     volumes:
+#      - mongo_storage:/data/db
+
+# volumes:
+#   mongo_storage: {}
+
+# Mongo will be used in a future to store the state.
+# Now that is stateless i leave it commented.
