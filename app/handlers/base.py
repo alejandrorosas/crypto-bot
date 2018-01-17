@@ -18,11 +18,6 @@ def help_handler(bot, update):
     update.message.reply_text('Help!')
 
 
-def echo_handler(bot, update):
-    """Echo the user message."""
-    update.message.reply_text(update.message.text)
-
-
 def error_handler(bot, update, error):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, error)

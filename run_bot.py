@@ -3,10 +3,10 @@
 #
 # Simple Bot send back the Crypto stats
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler
 
 from app.settings import TELEGRAM_BOT_TOKEN
-from app.handlers.base import start_handler, error_handler, echo_handler, help_handler
+from app.handlers.base import start_handler, error_handler, help_handler
 from app.handlers.cryptocurrencies import intense_handler, bitcoin_handler
 from app.handlers.pool import pool_handler
 
@@ -29,9 +29,6 @@ def main():
 
     # Pool handler
     dispatcher.add_handler(CommandHandler("pool", pool_handler))
-
-    # on noncommand i.e message - echo the message on Telegram
-    dispatcher.add_handler(MessageHandler(Filters.text, echo_handler))
 
     # log all errors
     dispatcher.add_error_handler(error_handler)
