@@ -8,7 +8,6 @@ from telegram.ext import Updater, CommandHandler
 from app.settings import TELEGRAM_BOT_TOKEN
 from app.handlers.base import start_handler, error_handler, help_handler
 from app.handlers.cryptocurrencies import intense_handler, bitcoin_handler
-from app.handlers.pool import pool_handler
 
 
 def main():
@@ -26,9 +25,6 @@ def main():
     # Currencies handler
     dispatcher.add_handler(CommandHandler("intense", intense_handler))
     dispatcher.add_handler(CommandHandler("bitcoin", bitcoin_handler))
-
-    # Pool handler
-    dispatcher.add_handler(CommandHandler("pool", pool_handler))
 
     # log all errors
     dispatcher.add_error_handler(error_handler)
