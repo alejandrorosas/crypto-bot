@@ -13,7 +13,7 @@ def format_currency_message(coin_info):
     price = coin_info['price_usd']
     hour_change = coin_info['percent_change_1h']
     day_change = coin_info['percent_change_24h']
-    return '*{} = {} USD*\n1h. {}%\n24h. {}'.format(symbol, price, hour_change, day_change)
+    return '*{} = {} USD*\n1h. {}%\n24h. {}%'.format(symbol, price, hour_change, day_change)
 
 
 def intense_handler(bot, update):
